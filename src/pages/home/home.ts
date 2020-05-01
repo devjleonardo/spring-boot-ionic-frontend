@@ -49,7 +49,7 @@ export class HomePage {
   }
 
   signup(){
-    this.navCtrl.push('SingupPage');
+    this.navCtrl.push('SignupPage');
   }
 
 }
