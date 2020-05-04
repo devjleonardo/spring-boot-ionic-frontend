@@ -1,14 +1,11 @@
 <ion-header>
-
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Profile</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 <ion-content padding>
   <ion-avatar>
     <img class="circle" [src]="cliente?.imageUrl || 'assets/imgs/avatar-blank.png'">
@@ -24,6 +21,8 @@
     </ion-item>
     <ion-item>
       <button ion-button block (click)="getCameraPicture()" [disabled]="cameraOn">Camera</button>
+      <button *ngIf="picture" ion-button outline block (click)="sendPicture()">Enviar imagem</button>
+      <button *ngIf="picture" ion-button outline block (click)="cancel()">Descartar imagem</button>
     </ion-item>
   </ion-card>
 </ion-content>
